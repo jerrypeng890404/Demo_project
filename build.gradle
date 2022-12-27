@@ -15,6 +15,22 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	implementation 'mysql:mysql-connector-java:8.0.31'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.4'
+	
+	//implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+	//implementation 'io.springfox:springfox-swagger2:2.9.2'
+	
+	//implementation 'org.jxls:jxls:2.7.2'
+ 	//implementation 'org.jxls:jxls-poi:2.11.0'
+ 	//implementation 'org.jxls:jxls-jexcel:1.0.9'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.12'
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
+	//憑證會造成網站無法連接
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	
 }
 
 tasks.named('test') {

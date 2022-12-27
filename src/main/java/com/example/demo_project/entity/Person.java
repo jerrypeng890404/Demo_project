@@ -1,12 +1,31 @@
 package com.example.demo_project.entity;
 
-public class Person { //entity (實體)
-	private String id = "ABC";
-	private String name = "彭捷";
-	private String city = "新竹";
-	private int age = 22;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity //宣告為實體類
+@Table(name = "person")
+public class Person {
+	
+	@Id //主鍵(PK)
+	@Column(name = "id") //欄位名稱
+	private String id;
+	
+	@Column(name = "name")
+	private String name;
+	
+	@Column(name = "age")
+	private int age;
+	
 	public Person() {
+	}
+	
+	public Person(String id, String name, int age) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
 	}
 
 	public String getId() {
@@ -25,14 +44,6 @@ public class Person { //entity (實體)
 		this.name = name;
 	}
 
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
 	public int getAge() {
 		return age;
 	}
@@ -40,5 +51,5 @@ public class Person { //entity (實體)
 	public void setAge(int age) {
 		this.age = age;
 	}
-
+	
 }
